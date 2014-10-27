@@ -1,0 +1,256 @@
+@import url('reset.css');
+@import url('fuentes.css');
+
+/*--- Estilos generales ---*/
+
+body {
+
+	background: #ffffff; /*--color fondo pagina--*/
+	font-family:Arial, Helvetica, Sans-serif ; /*-- cambia la tipografia de la pagina*/
+}
+
+a{text-decoration:none ;color: #fff;} /*para que no tenga decoracion el texto , luego el color del texto*/
+a:hover{text-decoration:underline;} /*--- cuando paso el mause sobre el texto( imagne o cuaquier cosa) cambia de color---*/
+/*-- wrap abarca toda la pagina, se usa para darle tamaño y centrar la pagina */
+#wrap {
+	width: 960px;
+	margin:auto;
+	clear:both; /* efecto para el header cuando pongamos un float left*/
+}
+/*--- HEADER---*/
+header{
+	width: 100%;
+	float:left;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #e4e0e0 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e4e0e0)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#e4e0e0 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%,#e4e0e0 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%,#e4e0e0 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #ffffff 0%,#e4e0e0 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e4e0e0',GradientType=0 ); /* IE6-9 */
+    box-shadow: 0px 3px 5px #000; /*--- para dar sombra ---*/
+      -moz-box-shadow: 0px 3px 5px #000; /*--- moz de mozila firefox-*/
+      -webkit-box-shadow: 0px 3px 5px #000; 
+}
+ /*para darle las medidas a nuestro menu */
+#subheader{
+      width: 960px;
+      margin: auto;
+}
+#subheader .thumb {
+	width: 160px;
+	height: 200px;   /*--- tamaño imagen height: 150px; ---*/
+	float: left;
+}
+/*---Menu---*/
+
+header #subheader nav {
+	float: left; /*--- para la izquierda---*/
+	width: 920px; /*---para completar los 960 px  del logoyipo 300 mas 660 es igual al total del sitio ---*/
+	padding: 0px 20px 10px; /*--- 30 px hacia arriba y abajo ---*/
+	text-align: right; /*---para el lado derecho ---*/
+}
+
+
+/*---primero entre a header luego sub nav ul li---*/
+
+header #subheader nav ul li {
+	display: inline;
+	font-family: sourcesans;
+}
+header #subheader nav ul li a {
+	color: #000;
+	font-size: 20px; /*tamaño de las letras del menu */
+	padding: 10px; /*distancia entre texto*/
+	  /*---efecto css 3 , para que carge en navegadores antiguos--*/
+	   border-radius: 2px; 
+	   -moz-border-radius: 2px;
+	   -webkit-border-radius: 2px;
+}
+
+header #subheader nav ul li a:hover {
+	color: #fff;
+	background: #1798af;
+	text-decoration: none;
+}
+
+/*---main--*/
+#main{
+	width: 100%;
+	margin: 40px 0px 0px 0px; /*--- distancia arriba hacia abajo despues de la sombra 20 px ---*/
+	float: left;
+}
+
+
+/*--- Slideshow--*/
+
+#slideshow {
+	width: 920px; /*tamaño del slideshow*/
+	height: 480px; /* tamaño del slidesho*/
+	float: left;
+	background:#000;
+	border: solid 10px #000;  /* fff*/
+	margin-bottom: 10px; /*---separacion del slideshow---*/
+	border-radius: 10px;
+		-moz-border-radius: 10px;
+		 -webkit-border-radius: 10px;
+}
+#slideshow .pagination {  
+	margin: 10px auto;
+	width: 100px;
+}
+
+#slideshow .pagination li {
+	float: left;
+	margin: 5px 5px;
+	list-style: none;
+}
+
+#slideshow img {  /* medidas de la imagen */
+	width: 920px;
+	height: 480px;
+}
+#slideshow .pagination li a { /* circulos del slideshow*/
+	  display: block;
+	  width: 12px;
+	  height: 0px;
+	  padding-top: 12px;
+	  background: #000;
+	  float: left;
+	  overflow: hidden;
+	  border-radius: 10px;
+		  -moz-border-radius: 10px;
+		  -webkit-border-radius: 10px;
+	}
+
+#slideshow .pagination li.current a {
+	background: #1798af;
+
+}
+
+/*--- CONTENIDO ---*/
+#contenido {
+	width: 700px;
+	float: left;
+}
+#contenido article {
+	float: left;
+	margin-bottom: 20px;
+
+}
+/*--- el punto (.) es para clases --*/
+#contenido article .titulo {
+	font-size: 22px;
+	font-family: sourcesans;
+	color: #000;
+}
+#contenido article .fecha {
+	font-size: 14px;
+	color: #1798af;
+	margin-bottom: 5px;
+}
+#contenido article .thumb {
+	width: 220px;
+	/*height: 150px;   /*--- tamaño imagen height: 150px; ---*/
+	float: left;
+	margin: 0px 10px 10px 0px;
+	border-radius: 10px; /*--- border redondiados---*//*-- modificado--*/
+        -moz-border-radius: 10px;
+        -wibkit-border-radius: 10px;
+
+}
+#contenido article > p {
+	color: #8c8c8c;
+	font-size: 14px;
+	text-align: justify;
+	/*line-height:*/
+}
+
+/*--FOOTER-*/
+footer {
+	width: 100%;
+	float: left;
+	clear: both; /*--  para eliminar los estilos que tenga --*/
+	background: #ffffff;
+	box-shadow: 0px 5px 0px #BDBDBD;
+		-moz-box-shadow: 0px 5px 0px #BDBDBD;
+		-webkit-box-shadow: 0px 5px 0px #BDBDBD;
+    border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+	
+	}
+footer section{
+	width: 440px;	
+	float: left;
+	padding: 1px 20px;
+}
+
+footer #redes-s > div { /*-- todos los div tendran la misma propiedad ---*/
+	width: 50;
+	height: 50px;
+	float:right;
+	background: #fff;
+	margin-right: 3px;
+	opacity: 0.5; /*---escala de 0 a 1---*/
+}
+footer #redes-s > div a {
+	width: 50px;
+	height: 50px;
+	display: inline-block ;/*--  elemento en linea en bloque --*/
+}
+
+footer #redes-s .facebook {
+	background: url(Imagenes/facebook.png); /* imagen de 20px--*/
+    margin-bottom: 20px;
+  	float: right;
+}
+footer #redes-s .twitter {
+	background: url(Imagenes/twitter.png); /* imagen de 20px--*/
+  	margin-bottom: 20px;
+  	float:right;
+}
+footer #redes-s .instagram {
+	background: url(Imagenes/instagram.png); /* imagen de 20px--*/
+	margin-bottom: 20px;
+	float: right;
+}
+
+footer #redes-s >div:hover {
+	opacity: 1;
+}
+
+#copyright {
+	float:left;
+	width: 960px;
+	margin:10px 20px; /*-- arriba y abajo 10 , y 0de derecha a izquierda--*/
+	padding: 0
+}
+#copyright {
+	text-align: center;
+	font-size: 12px;
+	color:#000;
+	font-family: Arial, Helvetica, Sans-serif;
+	padding: 0px 0px 40px;
+}
+
+#wrap #container {
+	width: 200px;
+	height: 200px;
+}
+
+.subs{
+    margin: auto;
+    width: 800px;
+    /*height: 500px;*/
+    padding: 10px;
+    border: solid 1px #555;
+    border-style: dashed;
+}
+
+.btn btn-warning:hover{
+color: #fff;
+background-color: #1798af;
+border-color: #1798af
+}
